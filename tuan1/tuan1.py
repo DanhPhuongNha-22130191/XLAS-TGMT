@@ -39,7 +39,7 @@ def merge_color_chanels(b,g,r):
 
 def convert_bgr_to_hsv(img):
     hsv_img = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
-    img_show('HSV image',img)
+    img_show('HSV image',hsv_img)
     return img
 
 def create_new_black_img(img):
@@ -60,8 +60,8 @@ img = read_img(path)
 # img = read_img(path)
 # b, g, r = split_color_chanels(img)
 # merge_color_chanels(b, g, r)
-# hsv = convert_bgr_to_hsv(read_img(path))
+hsv = convert_bgr_to_hsv(read_img(path))
 # get_img_info(hsv)
 # black = create_new_black_img(read_img(path))
 # print(black.shape)
-create_circle(img,(200,200),50,(0,255,255))
+# create_circle(black,(200,200),50,(0,255,255))
