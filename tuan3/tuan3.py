@@ -3,9 +3,9 @@ import cv2
 
 def histCalc(gray,L):
    hist = np.zeros(L,dtype=np.float32)
-   M,N = gray.shape
-   for row in range(M):
-       for col in range(N):
+   N,M = gray.shape
+   for row in range(N):
+       for col in range(M):
            g = gray[row,col]
            if 0<=g<L:
             hist[g]+=1
@@ -30,9 +30,9 @@ def histEqual(gray, L):
     e_hist = np.round((e_hist-c_min)*coef)
     e_hist = e_hist.astype(np.uint8)
     out = np.zeros_like(gray,dtype=np.uint8)
-    M,N = gray.shape
-    for row in range(M):
-        for col in range(N):
+    N,M = gray.shape
+    for row in range(N):
+        for col in range(M):
             g = int(gray[row,col])
             out[row,col] = e_hist[g]
     return out
