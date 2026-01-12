@@ -59,7 +59,5 @@ print(histCalc(img,L))
 print(histEqual(img,L))
     
 
-# path = r'tuan3\\black-white.png'
-# print(histCalc(read_img(path),256))
 
     
