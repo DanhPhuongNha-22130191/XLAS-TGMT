@@ -51,7 +51,13 @@ def create_circle(img,center,radius,color):
     new_img = cv2.circle(img,center,radius,color,thickness=2)
     img_show('New image',new_img)
     return new_img
-    
+
+def image_negative(img,L):
+    return L-img
+
+def covertToBin(img,threshold):
+    return (img > threshold).astype(np.uint8)*255
+
 path = r'tuan1\\model-surprise.png'
 img = read_img(path)
 # img_show(read_img(path))
@@ -60,8 +66,11 @@ img = read_img(path)
 # img = read_img(path)
 # b, g, r = split_color_chanels(img)
 # merge_color_chanels(b, g, r)
-hsv = convert_bgr_to_hsv(read_img(path))
+# hsv = convert_bgr_to_hsv(read_img(path))
 # get_img_info(hsv)
 # black = create_new_black_img(read_img(path))
 # print(black.shape)
 # create_circle(black,(200,200),50,(0,255,255))
+# img_show('Original',img)
+# img_show('Image negative', image_negative(img,255))
+img_show('Thresholding', covertToBin(img,127))

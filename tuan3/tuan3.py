@@ -1,13 +1,6 @@
 import numpy as np
 import cv2
 
-def read_img(path):
-    gray = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
-    if gray is None:
-        print('Image is None')
-        return
-    return gray
-
 def histCalc(gray,L):
    hist = np.zeros(L,dtype=np.float32)
    M,N = gray.shape
