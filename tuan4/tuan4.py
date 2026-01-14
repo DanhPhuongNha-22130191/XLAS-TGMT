@@ -2,17 +2,16 @@ import numpy as np
 import cv2
 
 def convolution(gray,kernel):
-   out = np.zeros_like(gray,float)
-   ksize = kernel.shape[0]
-   pad = ksize//2
-   padded = np.pad(gray,pad)
-   N,M = gray.shape
-   for row in range(N):
-    for col in range(M):
-     sub = padded[row:row+ksize,col:col+ksize]
-     out[row,col] = np.sum(sub*kernel)
-   return np.clip(out,0,255).astype(np.uint8)
-
+    out = np.zeros_like(gray,float)
+    ksize = kernel.shape[0]
+    pad = ksize//2
+    padded = np.pad(gray,pad)
+    N,M = gray.shape
+    for row in range(N):
+        for col in range(M):
+            sub = padded[row:row+ksize,col:col+ksize]
+            out[row,col] = np.sum(sub*kernel)
+    return out
 gray = np.array([
     [12,  4, 16,  8, 10, 14, 16, 10],
     [12,  4, 16,  8, 10, 14, 16, 10],
