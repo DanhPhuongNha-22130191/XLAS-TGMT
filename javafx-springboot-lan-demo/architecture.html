@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAN Chat Architecture</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    </script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #1e1e1e;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sơ đồ Kiến trúc Demo LAN Chat</h1>
+        <div class="mermaid">
+            graph TD
+            subgraph LAN [Mạng LAN]
+            direction TB
+            subgraph ServerMachine [Máy Server - IP: 192.168.1.44]
+            style ServerMachine fill:#f96,stroke:#333,stroke-width:2px
+            SB[Spring Boot Server<br />Port: 8080]
+
+            subgraph Components [Thành phần Server]
+            API[PingController<br />HTTP API]
+            WS[ChatHandler<br />WebSocket]
+            end
+
+            SB --> API
+            SB --> WS
+            end
+
+            subgraph ClientMachine1 [Laptop Client A]
+            style ClientMachine1 fill:#69d,stroke:#333,stroke-width:2px
+            FX1[JavaFX App<br />Client]
+            FX1 -- HTTP Request --> API
+            FX1 == WebSocket ==> WS
+            end
+
+            subgraph ClientMachine2 [Laptop Client B]
+            style ClientMachine2 fill:#69d,stroke:#333,stroke-width:2px
+            FX2[JavaFX App<br />Client]
+            FX2 -- HTTP Request --> API
+            FX2 == WebSocket ==> WS
+            end
+            end
+        </div>
+    </div>
+</body>
+
+</html>

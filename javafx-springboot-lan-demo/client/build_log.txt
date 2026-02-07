@@ -1,0 +1,94 @@
+Jan 26, 2026 7:39:13 PM org.jline.utils.Log logr
+WARNING: Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+[main] WARNING org.jline - Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+[INFO] Error stacktraces are turned on.
+[INFO] Processing build on daemon 4306e6db
+[INFO] Scanning for projects...
+[INFO] BuildTimeEventSpy is registered.
+[WARNING] The POM for org.beryx:badass-jlink-plugin:jar:2.25.0 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.beryx:badass-jlink-plugin:2.25.0: Plugin org.beryx:badass-jlink-plugin:2.25.0 or one of its dependencies could not be resolved:
+	org.beryx:badass-jlink-plugin:jar:2.25.0 was not found in https://repo.maven.apache.org/maven2 during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of central has elapsed or updates are forced
+[INFO] 
+[INFO] Using the SmartBuilder implementation with a thread count of 11
+[INFO] 
+[INFO] -------------------------< com.example:client >-------------------------
+[INFO] Building client 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for org.beryx:badass-jlink-plugin:jar:2.25.0 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.beryx:badass-jlink-plugin:2.25.0: Plugin org.beryx:badass-jlink-plugin:2.25.0 or one of its dependencies could not be resolved:
+	org.beryx:badass-jlink-plugin:jar:2.25.0 was not found in https://repo.maven.apache.org/maven2 during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of central has elapsed or updates are forced
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ client ---
+[INFO] 
+[INFO] --- jlink:3.2.0:jlink (default-cli) @ client ---
+[INFO]  -> module: javafx.base ( C:\Users\danhp\.m2\repository\org\openjfx\javafx-base\21\javafx-base-21-win.jar )
+[INFO]  -> module: javafx.graphicsEmpty ( C:\Users\danhp\.m2\repository\org\openjfx\javafx-graphics\21\javafx-graphics-21.jar )
+[INFO]  -> module: javafx.baseEmpty ( C:\Users\danhp\.m2\repository\org\openjfx\javafx-base\21\javafx-base-21.jar )
+[INFO]  -> module: javafx.controls ( C:\Users\danhp\.m2\repository\org\openjfx\javafx-controls\21\javafx-controls-21-win.jar )
+[INFO]  -> module: javafx.graphics ( C:\Users\danhp\.m2\repository\org\openjfx\javafx-graphics\21\javafx-graphics-21-win.jar )
+[INFO]  -> module: javafx.fxml ( C:\Users\danhp\.m2\repository\org\openjfx\javafx-fxml\21\javafx-fxml-21-win.jar )
+[INFO]  -> module: javafx.fxmlEmpty ( C:\Users\danhp\.m2\repository\org\openjfx\javafx-fxml\21\javafx-fxml-21.jar )
+[INFO]  -> module: javafx.controlsEmpty ( C:\Users\danhp\.m2\repository\org\openjfx\javafx-controls\21\javafx-controls-21.jar )
+[ERROR] 
+[ERROR] Error: automatic module cannot be used with jlink: javafx.baseEmpty from file:///C:/Users/danhp/.m2/repository/org/openjfx/javafx-base/21/javafx-base-21.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.332 s (Wall Clock)
+[INFO] Finished at: 2026-01-26T19:39:13+07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-jlink-plugin:3.2.0:jlink (default-cli) on project client: 
+[ERROR] Exit code: 1
+[ERROR] Command line was: jlink [--module-path, C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-base\\21\\javafx-base-21-win.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-graphics\\21\\javafx-graphics-21.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-base\\21\\javafx-base-21.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-controls\\21\\javafx-controls-21-win.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-graphics\\21\\javafx-graphics-21-win.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-fxml\\21\\javafx-fxml-21-win.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-fxml\\21\\javafx-fxml-21.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-controls\\21\\javafx-controls-21.jar, --add-modules, javafx.base,javafx.graphicsEmpty,javafx.baseEmpty,javafx.controls,javafx.graphics,javafx.fxml,javafx.fxmlEmpty,javafx.controlsEmpty, --output, D:\Programmings\Demo\javafx-springboot-lan-demo\client\target\maven-jlink\default]
+[ERROR] -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-jlink-plugin:3.2.0:jlink (default-cli) on project client: 
+Exit code: 1
+Command line was: jlink [--module-path, C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-base\\21\\javafx-base-21-win.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-graphics\\21\\javafx-graphics-21.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-base\\21\\javafx-base-21.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-controls\\21\\javafx-controls-21-win.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-graphics\\21\\javafx-graphics-21-win.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-fxml\\21\\javafx-fxml-21-win.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-fxml\\21\\javafx-fxml-21.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-controls\\21\\javafx-controls-21.jar, --add-modules, javafx.base,javafx.graphicsEmpty,javafx.baseEmpty,javafx.controls,javafx.graphics,javafx.fxml,javafx.fxmlEmpty,javafx.controlsEmpty, --output, D:\Programmings\Demo\javafx-springboot-lan-demo\client\target\maven-jlink\default]
+
+
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:333)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at io.takari.maven.builder.smart.SmartBuilderImpl.buildProject (SmartBuilderImpl.java:206)
+    at io.takari.maven.builder.smart.SmartBuilderImpl$ProjectBuildTask.run (SmartBuilderImpl.java:71)
+    at java.util.concurrent.Executors$RunnableAdapter.call (Executors.java:539)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:264)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1136)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:635)
+    at java.lang.Thread.run (Thread.java:842)
+Caused by: org.apache.maven.plugin.MojoExecutionException: 
+Exit code: 1
+Command line was: jlink [--module-path, C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-base\\21\\javafx-base-21-win.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-graphics\\21\\javafx-graphics-21.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-base\\21\\javafx-base-21.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-controls\\21\\javafx-controls-21-win.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-graphics\\21\\javafx-graphics-21-win.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-fxml\\21\\javafx-fxml-21-win.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-fxml\\21\\javafx-fxml-21.jar;C:\\Users\\danhp\\.m2\\repository\\org\\openjfx\\javafx-controls\\21\\javafx-controls-21.jar, --add-modules, javafx.base,javafx.graphicsEmpty,javafx.baseEmpty,javafx.controls,javafx.graphics,javafx.fxml,javafx.fxmlEmpty,javafx.controlsEmpty, --output, D:\Programmings\Demo\javafx-springboot-lan-demo\client\target\maven-jlink\default]
+
+
+    at org.apache.maven.plugins.jlink.JLinkExecutor.executeJlink (JLinkExecutor.java:115)
+    at org.apache.maven.plugins.jlink.JLinkMojo.execute (JLinkMojo.java:398)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at io.takari.maven.builder.smart.SmartBuilderImpl.buildProject (SmartBuilderImpl.java:206)
+    at io.takari.maven.builder.smart.SmartBuilderImpl$ProjectBuildTask.run (SmartBuilderImpl.java:71)
+    at java.util.concurrent.Executors$RunnableAdapter.call (Executors.java:539)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:264)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1136)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:635)
+    at java.lang.Thread.run (Thread.java:842)
+[ERROR] 
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

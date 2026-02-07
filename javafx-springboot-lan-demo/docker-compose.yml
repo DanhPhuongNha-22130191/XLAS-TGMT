@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  server:
+    image: phuongnha/javafx-lan-server:latest
+    container_name: demo-server
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - DB_URL=jdbc:mysql://db:3306/lan_demo_db
+      - DB_USERNAME=user
+      - DB_PASSWORD=password
+    networks:
+      - lan-network
+
+  db:
+    image: mysql:8.0
+    container_name: demo-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: lan_demo_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - lan-network
+
+networks:
+  lan-network:
+    driver: bridge
+
+volumes:
+  db_data:
